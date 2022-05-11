@@ -3,7 +3,7 @@ import React from 'react'
 
 
 
-export default function Cards({card, onCardClick}) {
+export default function Card({card, onCardClick}) {
   function handleClick() {
     onCardClick(card);
   }

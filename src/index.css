@@ -14,7 +14,7 @@
 @import url("../src/blocks/header/header.css");
 
 @import url("../src/blocks/page/page.css"); 
-
+@import url("../src/blocks/App.css"); 
 @import url("../src/blocks/popup/__container/__container_add/popup__container_add.css");
 @import url("../src/blocks/popup/__close-button/popup__close-button.css");
 

@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 import addImage from '../../src/images/profile-button-plus.svg'; 
 import pencilImage from '../../src/images/profile-button-pen.svg'; 
 import {api} from '../utils/Api'
-import Cards from './Cards'
+import Card from './Card'
   
 
 export default function Main({onEditProfile,onAddPlace,onEditAvatar, onCardClick}) {
@@ -65,7 +65,7 @@ export default function Main({onEditProfile,onAddPlace,onEditAvatar, onCardClick
     <section className="newelements">
       {cards.map((card) => {
         return (
-          <Cards key={card.id} card={card} onCardClick={onCardClick}/>
+          <Card key={card.id} card={card} onCardClick={onCardClick}/>
           );
         })}
       </section>
