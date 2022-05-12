@@ -22,8 +22,8 @@ export default function Main({onEditProfile,onAddPlace,onEditAvatar, onCardClick
   
   useEffect(() => {
      api.getCards()
-    .then((newelements) => {
-      const rendercard = newelements.map((data) => {
+    .then((newElements) => {
+      const rendercard = newElements.map((data) => {
         return {
           name: data.name,
           link: data.link,
