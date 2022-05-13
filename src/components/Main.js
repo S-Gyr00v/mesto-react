@@ -22,8 +22,8 @@ export default function Main({onEditProfile,onAddPlace,onEditAvatar, onCardClick
   
   useEffect(() => {
      api.getCards()
-    .then((newElements) => {
-      const rendercard = newElements.map((data) => {
+    .then((elements) => {
+      const rendercard = elements.map((data) => {
         return {
           name: data.name,
           link: data.link,
@@ -66,6 +66,7 @@ export default function Main({onEditProfile,onAddPlace,onEditAvatar, onCardClick
       {cards.map((card) => {
         return (
           <Card key={card.id} card={card} onCardClick={onCardClick}/>
+
           );
         })}
       </section>

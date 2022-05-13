@@ -8,7 +8,7 @@ function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false)
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false)
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false)
-  const [selectedCard, setSelectedCard] = useState(false)
+  const [selectedCard, setSelectedCard] = useState(null)
   const handleEditProfileClick = () => {
     setIsEditProfilePopupOpen(true)
   }
@@ -25,7 +25,9 @@ function App() {
     setIsEditAvatarPopupOpen(false)
     setSelectedCard(null)
   }
-  function handleCardClick (card) {
+
+  
+   function handleCardClick (card) {
     setSelectedCard(card)
   }
   return (
@@ -40,6 +42,8 @@ function App() {
         onCardClick = {handleCardClick}
 
         />
+
+
         <Footer className="footer" />
         <PopupWithForm name="profile" title="Редактировать профиль" isOpen={isEditProfilePopupOpen } onClose = {closeAllPopups}>
         <label className="popup__profile-info">
@@ -82,6 +86,8 @@ function App() {
         </label>
         </PopupWithForm>
         <ImagePopup card={selectedCard} onClose={closeAllPopups}/>
+
+
         </div>
     </div>
   );
