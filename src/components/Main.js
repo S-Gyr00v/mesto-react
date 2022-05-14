@@ -23,7 +23,7 @@ export default function Main({onEditProfile,onAddPlace,onEditAvatar, onCardClick
   useEffect(() => {
      api.getCards()
     .then((elements) => {
-      const rendercard = elements.map((data) => {
+      const renderCard = elements.map((data) => {
         return {
           name: data.name,
           link: data.link,
@@ -31,7 +31,7 @@ export default function Main({onEditProfile,onAddPlace,onEditAvatar, onCardClick
           id: data._id
         };
       });
-      setCards(rendercard);
+      setCards(renderCard);
     }).catch((err) => console.log(err))},[]);
      
    return (
