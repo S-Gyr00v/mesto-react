@@ -2,12 +2,12 @@ import React from "react";
 import closeImage from '../../src/images/popup-close-icon.svg'; 
 
 
-export default function PopupWithForm({name, title, isOpen, children, onClose}) {
+export default function PopupWithForm({name, title, isOpen, children, onClose, onSubmit}) {
   return (
     <section className={`popup popup_${name} ${isOpen ? 'popup_opened' : ''}`} >
     <div className={`popup__container popup__container_${name}`}>
       <h2 className="popup__title">{title}</h2>
-      <form className="popup__form" name={name} noValidate="">
+      <form className="popup__form" name={name} noValidate="" onSubmit={onSubmit}>
          {children}   
         <button
           type="submit"
